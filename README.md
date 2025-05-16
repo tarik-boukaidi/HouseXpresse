@@ -1,6 +1,6 @@
-# 🏠 HouseXpresse – Real Estate Web Platform
+# 🏠 HouseXpress – Real Estate Web Platform
 
-HouseXpresse is a full-stack real estate listing web application that allows users to view, search, and publish announcements for houses and lands available for sale or rent.  
+HouseXpress is a full-stack real estate listing web application that allows users to view, search, and publish announcements for houses and lands available for sale or rent.  
 Built using **HTML, CSS, PHP (PDO)**, and **MySQL**, it provides an easy-to-use interface for both visitors and registered users.
 
 ## 🚀 Features
