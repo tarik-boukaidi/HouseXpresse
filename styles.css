@@ -1,0 +1,721 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.t{
+    margin: -10% 5%;
+    position: relative;
+}
+
+.house{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(images/2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    height: 600px;
+    margin:10px 16px;
+    position: relative;
+}
+.search-container{
+   padding: 20px;
+   box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1), -3px 0 6px rgba(0, 0, 0, 0.1), 3px 0 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+   border-radius: 0 20px 20px 20px;
+   display: flex;
+   justify-content: space-between;
+   background-color: white;
+   display: flex;
+
+}
+
+
+.nav{
+    display: flex;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #000000;
+    height: 70px;
+}  
+header .nav ul {
+    display: flex;
+    list-style-type: none;
+}
+header .nav {
+    display: flex;
+    align-items: center;
+}
+header .nav ul li {
+    margin: 0 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    
+}
+header button{
+    border-radius: 40px;
+    padding: 5px 25px;
+    background-color: #854836;
+    border: 5px solid #854836;
+    color: white;
+    font-size: 1.1rem;
+}
+header .nav a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+header .nav a:hover{
+    color: #854836;
+}
+
+#scrool {
+    border: 2px solid #854836;
+    border-radius: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #854836;
+    color: white;
+    position:fixed;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease-in-out;
+    right: 2%;
+}
+body .hide{
+    visibility: hidden;
+}
+.house img{
+width: 100%;
+padding: 5px 25px;
+border-radius: 20px;
+height: 600px;
+}
+.house p{
+    color: white;
+    padding-left:5%;
+}
+.highlight{
+    color: #854836;
+}
+.house .main{
+    font-size: 46px;
+    padding-top: 15%;
+    line-height: 70px;
+}
+.house .h{
+    color:grey ;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 30px;
+
+}
+
+.t .button{
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1), -3px 0 6px rgba(0, 0, 0, 0.1), 3px 0 6px rgba(0, 0, 0, 0.1), 0 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px 0px 0px;
+    width:fit-content;
+    justify-content: center;
+    background-color: white;
+}
+.t .button .h.active{
+    color:white;
+    background-color: #854836;
+}
+.t .button .h{
+    padding: 12px 24px;
+}
+.t .button button{
+    font-weight: var(--fw-300);
+    border-radius: 6px;
+    padding: 12px 24px;
+    background-color: white;
+    font-size: 16px;
+    border: 1px  none;
+}
+.t .button button.active {
+    color: #854836;
+    background-color: white; 
+    font-weight: bold;
+}
+
+
+.search{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.Categorie{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.search-container .search i {
+    position: absolute;
+    top: 32%;
+    left: 4%;
+}
+.search #ville{
+    padding-left: 9%;
+}
+
+.search-container .search input{
+    padding:10px;
+    border-radius: 10px;
+    border:1 solid ;
+    padding-left: 35px;
+    box-sizing: border-box;
+    width: 250px;
+    border: 1px solid grey;
+
+}
+.form-group select{
+    padding: 10px;
+}
+.Categorie{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.min,.max {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.min select,.max select,.Categorie select,.search select{
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+    border: 1px solid grey;
+}
+.button_search button{
+    padding: 10px;
+    background-color: #854836;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.main2{
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    padding-top: 15%;
+}
+.ivideo {
+    position: relative; 
+}
+.ivideo video{
+
+ height: 500px;
+ border: 1px solid none;
+ border-radius: 15px;
+ margin-left: 15%;
+}
+.ivideo .bx-play{
+    position: absolute;
+    top: 50%;
+    right: 37%;
+    font-size: 78px;
+    color: white;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    color: #854836;
+}
+.main2 .m1{
+    font-size: 26px;
+}
+.textbutton{
+    margin-top: 15%;
+}
+.textbutton .m1{
+    line-height: 40px;
+}
+.textbutton .m2{
+    color: gray;
+    line-height: 30px;
+    width: 85%;
+    margin: 18px 0px;
+}
+.textbutton button{
+    padding: 12px 30px;
+    color: white;
+    background-color: #854836;
+    border-radius: 10px;
+}
+.main3{
+    margin: 5% 6%;
+    line-height: 30px;
+    padding-top: 8%;
+}
+
+.main3 .h,.main4 .h{
+    text-align: center;
+    line-height: 70px;
+}
+.carousel{
+    position: relative;
+}
+.small_image{
+    position:absolute;
+    top:-15%;
+    background-color: black;
+    color: white;
+    align-items: center;
+    display: flex;
+    gap:5px;
+    height: 20px;
+    width: 35px;
+    justify-content: center;
+    border-radius: 5px;
+}  
+ 
+.small_image i{
+    font-size: 15px;;
+}
+
+.texte{
+color: grey;
+line-height: 25px;
+}
+.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:50px 0px;
+}
+.icons .mini{
+    text-align: center;
+    gap: 25px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+}
+.icons .mini ion-icon{
+    font-size: 35px;
+    border: 1px solid none;
+    padding: 30px;
+    border-radius: 50%;
+    color: #854836;
+    background-color:#f4ccbf;/*f5c0af*/
+}
+.boxes img{
+  height: 210px;
+  border: 1px solid none;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+.card-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-content p{
+    min-height: 50px;
+    max-height: 80px;
+}
+.border{
+   padding: 20px;
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    margin:50px 0px;
+    gap: 15px;
+}
+.boxes {
+    background: whitesmoke;
+    border-radius: 8px;
+    height:500px;
+    margin:5px;
+}
+
+.twachi{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    line-height: 80px;
+    justify-content: space-between;
+
+}
+.twachi hr{
+    width: 100%;
+}
+.twachi .dakchi i{
+    font-size: 25px;
+    color: #854836;
+}
+.dakchi{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.card_price{
+    display: flex;
+    gap: 16%;
+}
+.star{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.price{
+    color:#27ae60;
+}
+.l{
+    display: flex;
+    gap: 20px;
+}
+.btn{
+    padding:10px 30px;
+    background-color: #854836;
+    color: #fff;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+.main33{
+    margin: 5% 6%;
+    line-height: 30px;
+}
+.badge.sell{
+    background-color: #854836;
+    color: white;
+}
+.badge.rent{
+    background-color: white ;    ;
+    color:#854836 ;
+}
+.badge{
+    position:absolute;
+    top: -75%;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.twachi1{
+    margin-left: -10px;
+}
+.btn span{
+    font-size: 15px;
+}
+.btn ion-icon{
+    font-size: 18px;
+    vertical-align: middle;
+}
+.meta-3{
+    text-align: center;
+}
+
+.sell-rent {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border-radius: 20px;
+    max-width: 700px;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    bottom: -50px;
+  }
+  
+  .sell-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+  }
+  .border{
+    position: relative;
+
+  }
+  .sell-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #854836;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .sell-btn:hover {
+    background-color: #854836;
+    transform: translateY(-2px);
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+.pagination a {
+    color: #854836;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+.main4{
+    margin-top:2%;
+}
+.pagination a:hover {
+background-color: #854836;
+color: white;
+}
+
+.pagination a.active {
+background-color: #854836;
+color: white;
+border: 1px solid #854836;
+}
+  
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #854836;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #854836;
+}
+
+.social-icons a {
+    font-size: 24px;
+    margin: 0 8px;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #854836;
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 80px;
+    right: 27px;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #854836;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    font-size: 20px;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .dark-mode-toggle i {
+    color: #ffcc00;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header */
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .nav a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .nav a:hover {
+    color: #a05a4a;
+}
+
+body.dark-mode header button {
+    background-color: #854836;
+    color: white;
+}
+
+/* Main Sections */
+body.dark-mode .house {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/2.jpg);
+}
+
+body.dark-mode .house .h {
+    color: #b0b0b0;
+}
+
+/* Search Container */
+body.dark-mode .search-container {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .search-container input,
+body.dark-mode .search-container select {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+/* Property Boxes */
+body.dark-mode .boxes {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .border {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .texte {
+    color: #b0b0b0;
+}
+
+body.dark-mode .price {
+    color: #27ae60;
+}
+
+/* Pagination */
+body.dark-mode .pagination a {
+    background-color: #854836;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .pagination a:hover {
+    background-color: #4a1f12;
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background-color: #111;
+}
+
+body.dark-mode .footer-bottom {
+    background-color: #000;
+}
+
+/* Sell Rent Section */
+body.dark-mode .sell-rent {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Icons */
+body.dark-mode .dakchi i {
+    color: #854836;
+}
+body.dark-mode .logo h1 {
+    color: white; /* Makes all text white */
+}
+
+body.dark-mode .logo .highlight {
+    color: #854836; /* Keeps the X in your brand color */
+}
+body.dark-mode .sell-text {
+    color: white !important;
+}
+
+/* Optional: If you want to adjust the button text color as well */
+body.dark-mode .sell-btn {
+    color: white;
+}
+/* Dark Mode for Button Group */
+body.dark-mode .t .button {
+    background-color: #2d2d2d;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3), 
+                -3px 0 6px rgba(0, 0, 0, 0.3), 
+                3px 0 6px rgba(0, 0, 0, 0.3), 
+                0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .t .button .h {
+    color: #e0e0e0;
+    background-color: transparent;
+}
+
+body.dark-mode .t .button .h.active {
+    color: white;
+    background-color: #854836; /* Your brand color */
+}
+
+body.dark-mode .t .button .h:hover:not(.active) {
+    background-color: #3a3a3a;
+}
+
+/* Transition for smooth effect */
+body.dark-mode .t .button .h {
+    transition: all 0.3s ease;
+}
+.hide1{
+    display: none;
+}

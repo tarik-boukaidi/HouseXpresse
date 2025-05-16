@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+  }
+  
+  header {
+    background-color: #854836;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    position:relative;
+    margin-top:60px;
+  }
+  
+  .property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px; 
+  }
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .carousel {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 15px;
+    height: 220px; /* Reduced from 250px for a shorter carousel */
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 220px; 
+    object-fit: contain; 
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .carousel-image[style*="display: none"] {
+    opacity: 0;
+  }
+  
+  .carousel-image:not([style*="display: none"]) {
+    opacity: 1;
+  }
+  .small_image{
+    position:absolute;
+    top:-25%;
+    background-color: black;
+    color: white;
+    align-items: center;
+    display: flex;
+    gap:5px;
+    height: 20px;
+    width: 35px;
+    justify-content: center;
+    border-radius: 5px;
+}   
+.small_image i{
+    font-size: 15px;;
+}
+  .card-content {
+    padding: 15px;
+    flex-grow: 1;
+    position: relative;
+  }
+  
+  .card-content h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #2c3e50;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    position:absolute;
+    top: -175%;
+  }
+  
+.badge.sell{
+    background-color: #854836;
+    color: white;
+}
+.badge.rent{
+    background-color: white ;    ;
+    color:#854836 ;
+}
+
+  
+  .price {
+    font-weight: bold;
+    color: #27ae60;
+    margin: 8px 0;
+
+  }
+  
+  .meta {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .btn {
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .btn-edit {
+    background-color: #f1c40f;
+    color: white;
+  }
+  .btn-edit button{
+    background-color: transparent;
+    border: none;
+    padding: 8px 16px;
+  }
+  
+  .btn-edit:hover {
+    background-color: #d4ac0d;
+  }
+  
+  .btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c0392b;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 22px;
+    }
+    .carousel, .carousel-image {
+      height: 200px; /* Even shorter for mobile */
+    }
+    .card {
+      min-height: 350px; /* Compact for mobile */
+    }
+  }
+/* Add this to your seemyownpub.css file */
+/* ==================== */
+/* DARK MODE STYLES */
+/* ==================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header */
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* Property Grid */
+body.dark-mode .property-grid {
+  background-color: #121212;
+}
+
+/* Cards */
+body.dark-mode .card {
+  background-color: #2d2d2d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+}
+
+body.dark-mode .card-content {
+  color: #e0e0e0;
+}
+
+body.dark-mode .card-actions .btn {
+  color: #e0e0e0;
+}
+
+/* Buttons */
+body.dark-mode .btn-edit {
+  background-color: #f1c40f; /* Green */
+  border-color: #d4ac0d;
+}
+
+body.dark-mode .btn-delete {
+  background-color: #d9534f; /* Red */
+  border-color: #d43f3a;
+}
+
+body.dark-mode .btn:hover {
+  opacity: 0.8;
+}
+/* Supprimez les anciens styles .retour-container et .btn-retour */
+
+/* Nouveaux styles optimisés */
+.retour-container {
+  position: absolute;
+  top: -3%;
+  left: -2%;
+  z-index: 10;
+}
+
+.btn-retour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #854836;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-retour i {
+  font-size: 24px;
+}
+
+.btn-retour:hover {
+  background-color: #6d3a2b;
+}
+
+/* Dark mode */
+body.dark-mode .btn-retour {
+  background-color: rgba(105, 98, 98, 0.8);
+  color: #121212;
+}
+
+body.dark-mode .btn-retour:hover {
+  background-color: rgba(146, 134, 134, 0.8);
+}
+
+/* Badges */
+body.dark-mode .badge {
+  color: white;
+}
+
+body.dark-mode .badge.sell {
+  background-color: #854836; /* Your brand color */
+}
+
+body.dark-mode .badge.rent {
+  background-color: white; 
+  color: #854836;
+}
+
+/* Meta info */
+body.dark-mode .meta {
+  color: #b0b0b0;
+}
+
+/* Price */
+body.dark-mode .price {
+  color: #27ae60; /* Green */
+}
+
+/* Small image counter */
+body.dark-mode .small_image {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+body.dark-mode h1{
+  color: #854836;
+}
